@@ -94,6 +94,15 @@ ggplot(df, aes(x = release_year, y = counts)) +
   theme_pubclean()
 
 
+#4. 6
+popularity<-movies[with(movies,order(-movies$popularity)),]
+head(popularity$genres,20)
+
+
+category<-popularity %>% separate(genres,c("categoria1","categoria2","categoria3","categoria4"),sep="\\|")
+print("4.6")
+head(category$categoria1,20)
+
 #4.7
 
 mostRepeatedGenre <- tail(names(sort(table(movies$genres))), 1)
@@ -102,7 +111,7 @@ genresIndividualList = unlist(strsplit(movies$genres, "\\|"), recursive = FALSE)
 mostRepeatedGenresTable = sort(table(genresIndividualList))
 mostRepeatedGenre <- tail(names(mostRepeatedGenresTable), 1)
 print(mostRepeatedGenre)
-print("Grafica 4.6")
+print("Grafica 4.7")
 plot(tail(mostRepeatedGenresTable, 5))
 
 #4.8
