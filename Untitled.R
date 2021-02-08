@@ -27,6 +27,24 @@ plot(movies$popularity, type = "l")
 ggdensity(movies$vote_average, 
           main = "votes avg",
           xlab = "avg")
+ggdensity(movies$budget, 
+          main = "votes avg",
+          xlab = "avg")
+ggdensity(movies$puplarity, 
+          main = "votes avg",
+          xlab = "avg")
+ggdensity(movies$revenue, 
+          main = "votes avg",
+          xlab = "avg")
+ggdensity(movies$runtime, 
+          main = "votes avg",
+          xlab = "avg")
+ggdensity(movies$release_year, 
+          main = "votes avg",
+          xlab = "avg")
+ggdensity(movies$vote_count, 
+          main = "votes avg",
+          xlab = "avg")
 
 hist(movies$popularity)
 order(movies$revenue,na.last = TRUE,decreasing = TRUE)
