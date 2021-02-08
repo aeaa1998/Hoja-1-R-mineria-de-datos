@@ -72,3 +72,12 @@ ggplot(df, aes(x = release_year, y = counts)) +
   geom_bar(fill = "#0073C2FF", stat = "identity") +
   geom_text(aes(label = counts), vjust = -0.3) + 
   theme_pubclean()
+
+
+#4. 6
+popularity<-movies[with(movies,order(-movies$popularity)),]
+head(popularity$genres,20)
+
+library(tidyr)
+category<-popularity %>%separate(genres,c("categoria1","categoria2","categoria3","categoria4"),sep="\\|")
+head(category$categoria1,20)
